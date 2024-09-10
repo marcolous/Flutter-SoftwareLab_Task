@@ -5,6 +5,7 @@ import 'package:software_lab/feature/auth/presentation/view/form_info/form_info_
 import 'package:software_lab/feature/auth/presentation/view/login/login_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/register/register_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/reset_password/reset_password_view.dart';
+import 'package:software_lab/feature/auth/presentation/view/verification/verification_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/verify_otp/verify_otp_view.dart';
 import 'package:software_lab/feature/splash/presentation/view/splash_view.dart';
 
@@ -29,7 +30,7 @@ class SoftwareLab extends StatelessWidget {
         Routes.kVerifyOtpView: (context) => const VerifyOtpView(),
         Routes.kResetPasswordView: (context) => const ResetPasswordView(),
         Routes.kFormInfoView: (context) => const FormInfoView(),
-        Routes.kVerificationView: (context) => const ResetPasswordView(),
+        Routes.kVerificationView: (context) => const VerificationView(),
         Routes.kBusinessHoursView: (context) => const ResetPasswordView(),
         Routes.kAllDoneView: (context) => const ResetPasswordView(),
       },
@@ -45,6 +46,6 @@ class SoftwareLab extends StatelessWidget {
 
 //* register 
 //* form info
-// verification
+//* verification
 // business hours
 // all done

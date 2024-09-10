@@ -65,4 +65,8 @@ class AppImages {
     "assets/images/back.png",
     // fit: BoxFit.fitWidth,
   );
+  static Image cam = Image.asset(
+    "assets/images/cam.png",
+    // fit: BoxFit.fitWidth,
+  );
 }

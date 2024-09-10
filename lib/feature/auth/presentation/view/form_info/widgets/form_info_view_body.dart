@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:software_lab/core/utils/app_images.dart';
+import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/core/utils/styles.dart';
-import 'package:software_lab/core/widgets/custom_button.dart';
+import 'package:software_lab/core/widgets/custom_continue_back_row.dart';
 import 'package:software_lab/core/widgets/custom_dro_down_menu.dart';
 import 'package:software_lab/core/widgets/custom_text_field.dart';
 
@@ -108,22 +109,9 @@ class _FormInfoViewBodyState extends State<FormInfoViewBody> {
                 ),
               ),
               const Expanded(child: Gap(30)),
-              SizedBox(
-                height: 70,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {},
-                      child: SizedBox(height: 25, child: AppImages.back),
-                    ),
-                    CustomButton(
-                      aspectRatio: 3.5,
-                      title: 'Continue',
-                      onPressed: () {},
-                    ),
-                  ],
-                ),
+              CustomContinueBackRow(
+                onPressed: () =>
+                    Navigator.pushNamed(context, Routes.kVerificationView),
               ),
               const Gap(20)
             ],
