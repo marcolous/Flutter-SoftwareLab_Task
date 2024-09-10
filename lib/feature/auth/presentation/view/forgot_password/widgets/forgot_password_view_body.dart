@@ -65,7 +65,7 @@ class _ForgotPasswordViewBodyState extends State<ForgotPasswordViewBody> {
             ),
             const Gap(70),
             CustomTextField(
-              prefixIcon: AppImages.email,
+              prefixIcon: AppImages.phone,
               hintText: 'Phone Number',
               controller: _phone,
               keyboardType: TextInputType.number,

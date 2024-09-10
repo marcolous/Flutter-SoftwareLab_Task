@@ -68,7 +68,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
               ),
               const Gap(30),
               CustomTextField(
-                prefixIcon: AppImages.email,
+                prefixIcon: AppImages.name,
                 hintText: 'Full Name',
                 controller: _fullName,
               ),
@@ -80,7 +80,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
               ),
               const Gap(25),
               CustomTextField(
-                prefixIcon: AppImages.email,
+                prefixIcon: AppImages.phone,
                 hintText: 'Phone Number',
                 controller: _phone,
                 keyboardType: TextInputType.number,

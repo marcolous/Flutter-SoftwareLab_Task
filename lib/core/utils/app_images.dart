@@ -33,4 +33,12 @@ class AppImages {
     "assets/images/fb.png",
     // fit: BoxFit.fitWidth,
   );
+  static Image name = Image.asset(
+    "assets/images/name.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image phone = Image.asset(
+    "assets/images/phone.png",
+    // fit: BoxFit.fitWidth,
+  );
 }
