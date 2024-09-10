@@ -77,7 +77,7 @@ class Styles {
   static TextStyle style15(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 15),
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w400,
       color: Colors.black,
       fontFamily: fontFamily,
     );
@@ -239,7 +239,7 @@ class Styles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 35),
       fontWeight: FontWeight.w600,
-      color: Colors.white,
+      color: Colors.black,
       fontFamily: fontFamily,
     );
   }

@@ -13,4 +13,24 @@ class AppImages {
     "assets/images/onBoarding3.png",
     // fit: BoxFit.fitWidth,
   );
+  static Image email = Image.asset(
+    "assets/images/email.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image password = Image.asset(
+    "assets/images/password.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image google = Image.asset(
+    "assets/images/google.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image apple = Image.asset(
+    "assets/images/apple.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image fb = Image.asset(
+    "assets/images/fb.png",
+    // fit: BoxFit.fitWidth,
+  );
 }

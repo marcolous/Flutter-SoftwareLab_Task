@@ -15,7 +15,11 @@ class SplashView extends StatelessWidget {
       child: BlocConsumer<SplashCubit, SplashState>(
         listener: (context, state) {
           if (state is OnBoardingCompleted) {
-            Navigator.pushNamed(context, Routes.kLoginView);
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              Routes.kLoginView,
+              (route) => false,
+            );
           }
         },
         builder: (context, state) {
@@ -31,7 +35,7 @@ class SplashView extends StatelessWidget {
                   height: 0,
                   child: PageView.builder(
                     controller: _pageController,
-                    itemCount: onBoardingData.length,
+                    itemCount: pageCount,
                     itemBuilder: (context, index) {
                       return const SizedBox();
                     },
@@ -95,8 +99,11 @@ class SplashView extends StatelessWidget {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () =>
-                              Navigator.pushNamed(context, Routes.kLoginView),
+                          onTap: () => Navigator.pushNamedAndRemoveUntil(
+                            context,
+                            Routes.kLoginView,
+                            (route) => false,
+                          ),
                           child: Text(
                             'Login',
                             style: Styles.style14(context).copyWith(
