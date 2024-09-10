@@ -9,3 +9,5 @@ class OnBoardingState extends SplashState {
 
   OnBoardingState({required this.onBoarding});
 }
+
+class OnBoardingCompleted extends SplashState {}
