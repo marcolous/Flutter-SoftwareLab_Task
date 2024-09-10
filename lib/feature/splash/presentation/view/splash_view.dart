@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/core/utils/styles.dart';
+import 'package:software_lab/core/widgets/custom_login_text.dart';
 import 'package:software_lab/feature/splash/presentation/manager/splash_cubit.dart';
 
 class SplashView extends StatelessWidget {
@@ -98,19 +99,7 @@ class SplashView extends StatelessWidget {
                             style: Styles.style16(context),
                           ),
                         ),
-                        GestureDetector(
-                          onTap: () => Navigator.pushNamedAndRemoveUntil(
-                            context,
-                            Routes.kLoginView,
-                            (route) => false,
-                          ),
-                          child: Text(
-                            'Login',
-                            style: Styles.style14(context).copyWith(
-                              decoration: TextDecoration.underline,
-                            ),
-                          ),
-                        ),
+                        const CustomLoginText(),
                       ],
                     ),
                   ),

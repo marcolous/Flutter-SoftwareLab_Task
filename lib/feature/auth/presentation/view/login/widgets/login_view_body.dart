@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:software_lab/core/utils/app_images.dart';
+import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/core/utils/styles.dart';
 import 'package:software_lab/core/widgets/custom_button.dart';
+import 'package:software_lab/core/widgets/custom_google_apple_fb_row.dart';
 import 'package:software_lab/core/widgets/custom_text_field.dart';
 
 class LoginViewBody extends StatefulWidget {
@@ -36,20 +38,26 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 style: Styles.style35(context),
               ),
               const Gap(25),
-              Text.rich(
-                // textAlign: TextAlign.center,
-                TextSpan(
-                  text: 'New here?',
-                  style: Styles.style16(context).copyWith(
-                    color: const Color(0xff261C12).withOpacity(.3),
-                  ),
-                  children: [
-                    TextSpan(
-                      text: '  Create account',
-                      style: Styles.style16(context)
-                          .copyWith(color: const Color(0xffD5715B)),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, Routes.kRegisterView);
+                },
+                child: Text.rich(
+                  // textAlign: TextAlign.center,
+                  TextSpan(
+                    text: 'New here?',
+                    style: Styles.style16(context).copyWith(
+                      color: const Color(0xff261C12).withOpacity(.3),
                     ),
-                  ],
+                    children: [
+                      TextSpan(
+                        text: '  Create account',
+                        style: Styles.style16(context)
+                            .copyWith(color: const Color(0xffD5715B)),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const Text('  '),
@@ -95,41 +103,4 @@ class _LoginViewBodyState extends State<LoginViewBody> {
   }
 }
 
-class CustomGoogleAppleFBRow extends StatelessWidget {
-  const CustomGoogleAppleFBRow({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        CustomLoginWith(child: AppImages.google),
-        CustomLoginWith(child: AppImages.apple),
-        CustomLoginWith(child: AppImages.fb),
-      ],
-    );
-  }
-}
-
-class CustomLoginWith extends StatelessWidget {
-  const CustomLoginWith({super.key, required this.child});
-  final Widget child;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 60,
-      width: 120,
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(40),
-        border: Border.all(
-          color: Colors.black.withOpacity(.08),
-          width: 2,
-        ),
-      ),
-      child: child,
-    );
-  }
-}

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/feature/auth/presentation/view/login/login_view.dart';
+import 'package:software_lab/feature/auth/presentation/view/register/register_view.dart';
 import 'package:software_lab/feature/splash/presentation/view/splash_view.dart';
 
 void main() {
@@ -18,21 +19,21 @@ class SoftwareLab extends StatelessWidget {
       home: SplashView(),
       routes: {
         Routes.kSplashView: (context) => SplashView(),
-        // Routes.kRegisterView: (context) => const RegisterView(),
         Routes.kLoginView: (context) => const LoginView(),
+        Routes.kRegisterView: (context) => const RegisterView(),
       },
     );
   }
 }
 
 //* onboarding
-// login
+//* login
 // forgot password
 // verify otp
 // reset password
 
-// register 
-//? form info
-//? verification
-//? business hours
-//? all done
+//* register 
+// form info
+// verification
+// business hours
+// all done
