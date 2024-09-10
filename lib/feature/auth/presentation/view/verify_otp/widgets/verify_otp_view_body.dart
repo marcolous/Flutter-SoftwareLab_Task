@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:software_lab/core/utils/app_images.dart';
-import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/core/utils/styles.dart';
 import 'package:software_lab/core/widgets/custom_button.dart';
-import 'package:software_lab/core/widgets/custom_text_field.dart';
+import 'package:software_lab/feature/auth/presentation/view/verify_otp/widgets/verification_input_row.dart';
 
-class ForgotPasswordViewBody extends StatefulWidget {
-  const ForgotPasswordViewBody({super.key});
+class VerifyOtpViewBody extends StatefulWidget {
+  const VerifyOtpViewBody({super.key});
 
   @override
-  State<ForgotPasswordViewBody> createState() => _ForgotPasswordViewBodyState();
+  State<VerifyOtpViewBody> createState() => _VerifyOtpViewBodyState();
 }
 
-class _ForgotPasswordViewBodyState extends State<ForgotPasswordViewBody> {
-  final TextEditingController _phone = TextEditingController();
-  final GlobalKey<FormState> formKey = GlobalKey();
+class _VerifyOtpViewBodyState extends State<VerifyOtpViewBody> {
+  bool _allFieldsFilled = false;
+  String _otp = '';
+  bool isVerifying = false;
+  bool isResendingVerify = false;
 
-  @override
-  void dispose() {
-    _phone.dispose();
-    super.dispose();
+  void _onFieldsChange(bool allFieldsFilled) {
+    setState(() {
+      _allFieldsFilled = allFieldsFilled;
+    });
+  }
+
+  void _onOtpChange(String otp) {
+    setState(() {
+      _otp = otp;
+    });
   }
 
   @override
@@ -37,7 +43,7 @@ class _ForgotPasswordViewBodyState extends State<ForgotPasswordViewBody> {
             ),
             const Gap(90),
             Text(
-              'Forgot Password?',
+              'Verify OTP',
               style: Styles.style35(context),
             ),
             const Gap(25),
@@ -57,17 +63,26 @@ class _ForgotPasswordViewBodyState extends State<ForgotPasswordViewBody> {
               ),
             ),
             const Gap(70),
-            CustomTextField(
-              prefixIcon: AppImages.email,
-              hintText: 'Phone Number',
-              controller: _phone,
-              keyboardType: TextInputType.number,
+            VerifyOtpInputRow(
+              onFieldsChanged: _onFieldsChange,
+              onOtpChanged: _onOtpChange,
             ),
             const Gap(30),
             CustomButton(
-              title: 'Send Code',
-              onPressed: () =>
-                  Navigator.pushNamed(context, Routes.kVerifyOtpView),
+              title: 'Submit',
+              onPressed: () {},
+            ),
+            const Gap(20),
+            Center(
+              child: GestureDetector(
+                onTap: () {},
+                child: Text(
+                  'Resend Code',
+                  style: Styles.style14(context).copyWith(
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
