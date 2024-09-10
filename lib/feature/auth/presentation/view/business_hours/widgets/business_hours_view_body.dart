@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/core/utils/styles.dart';
 import 'package:software_lab/core/widgets/custom_continue_back_row.dart';
 import 'package:software_lab/feature/auth/presentation/view/business_hours/widgets/days_row.dart';
@@ -47,7 +48,8 @@ class BusinessHoursViewBody extends StatelessWidget {
               const Expanded(child: Gap(30)),
               CustomContinueBackRow(
                 title: 'Signup',
-                onPressed: () {},
+                onPressed: () =>
+                    Navigator.pushNamed(context, Routes.kAllDoneView),
               ),
               const Gap(20)
             ],
