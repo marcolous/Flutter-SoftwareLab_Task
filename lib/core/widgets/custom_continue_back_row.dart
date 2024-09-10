@@ -3,9 +3,9 @@ import 'package:software_lab/core/utils/app_images.dart';
 import 'package:software_lab/core/widgets/custom_button.dart';
 
 class CustomContinueBackRow extends StatelessWidget {
-  const CustomContinueBackRow({super.key, required this.onPressed});
+  const CustomContinueBackRow({super.key, required this.onPressed, this.title});
   final void Function() onPressed;
-
+  final String? title;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,7 +19,7 @@ class CustomContinueBackRow extends StatelessWidget {
           ),
           CustomButton(
             aspectRatio: 3.5,
-            title: 'Continue',
+            title: title ?? 'Continue',
             onPressed: onPressed,
           ),
         ],

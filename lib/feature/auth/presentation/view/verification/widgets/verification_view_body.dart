@@ -2,6 +2,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:software_lab/core/utils/app_images.dart';
+import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/core/utils/styles.dart';
 import 'package:software_lab/core/widgets/custom_continue_back_row.dart';
 
@@ -93,7 +94,11 @@ class _VerificationViewBodyState extends State<VerificationViewBody> {
                 ),
               const Gap(25),
               const Expanded(child: Gap(30)),
-              CustomContinueBackRow(onPressed: () {}),
+              CustomContinueBackRow(
+                title: _filePath == null ? null : 'Submit',
+                onPressed: () =>
+                    Navigator.pushNamed(context, Routes.kBusinessHoursView),
+              ),
               const Gap(20)
             ],
           ),
