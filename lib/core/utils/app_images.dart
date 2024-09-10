@@ -41,4 +41,28 @@ class AppImages {
     "assets/images/phone.png",
     // fit: BoxFit.fitWidth,
   );
+  static Image arrowDown = Image.asset(
+    "assets/images/arrow_down.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image business = Image.asset(
+    "assets/images/business.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image city = Image.asset(
+    "assets/images/city.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image informal = Image.asset(
+    "assets/images/informal.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image street = Image.asset(
+    "assets/images/street.png",
+    // fit: BoxFit.fitWidth,
+  );
+  static Image back = Image.asset(
+    "assets/images/back.png",
+    // fit: BoxFit.fitWidth,
+  );
 }

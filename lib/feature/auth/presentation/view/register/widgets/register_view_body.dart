@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:software_lab/core/utils/app_images.dart';
+import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/core/utils/styles.dart';
 import 'package:software_lab/core/widgets/custom_button.dart';
 import 'package:software_lab/core/widgets/custom_google_apple_fb_row.dart';
@@ -39,7 +40,8 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Form(
           key: formKey,
-          child: ListView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'FarmerEats',
@@ -100,6 +102,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                 obscureText: true,
               ),
               const Gap(30),
+              const Expanded(child: Gap(30)),
               SizedBox(
                 height: 70,
                 child: Row(
@@ -109,11 +112,13 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                     CustomButton(
                       aspectRatio: 3.5,
                       title: 'Continue',
-                      onPressed: () {},
+                      onPressed: () =>
+                          Navigator.pushNamed(context, Routes.kFormInfoView),
                     ),
                   ],
                 ),
               ),
+              const Gap(20)
             ],
           ),
         ),

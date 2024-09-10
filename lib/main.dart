@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/feature/auth/presentation/view/forgot_password/forgot_password_view.dart';
+import 'package:software_lab/feature/auth/presentation/view/form_info/form_info_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/login/login_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/register/register_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/reset_password/reset_password_view.dart';
@@ -27,6 +28,10 @@ class SoftwareLab extends StatelessWidget {
         Routes.kForgotPasswordView: (context) => const ForgotPasswordView(),
         Routes.kVerifyOtpView: (context) => const VerifyOtpView(),
         Routes.kResetPasswordView: (context) => const ResetPasswordView(),
+        Routes.kFormInfoView: (context) => const FormInfoView(),
+        Routes.kVerificationView: (context) => const ResetPasswordView(),
+        Routes.kBusinessHoursView: (context) => const ResetPasswordView(),
+        Routes.kAllDoneView: (context) => const ResetPasswordView(),
       },
     );
   }
@@ -39,7 +44,7 @@ class SoftwareLab extends StatelessWidget {
 //* reset password
 
 //* register 
-// form info
+//* form info
 // verification
 // business hours
 // all done
