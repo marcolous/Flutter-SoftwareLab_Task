@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:software_lab/core/utils/routes.dart';
+import 'package:software_lab/feature/auth/presentation/view/forgot_password/forgot_password_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/login/login_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/register/register_view.dart';
 import 'package:software_lab/feature/splash/presentation/view/splash_view.dart';
@@ -21,6 +22,7 @@ class SoftwareLab extends StatelessWidget {
         Routes.kSplashView: (context) => SplashView(),
         Routes.kLoginView: (context) => const LoginView(),
         Routes.kRegisterView: (context) => const RegisterView(),
+        Routes.kForgotPasswordView: (context) => const ForgotPasswordView(),
       },
     );
   }

@@ -25,7 +25,7 @@ class CustomTextField extends StatelessWidget {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(12),
       ),
       child: TextFormField(
         validator: (value) {
@@ -68,7 +68,7 @@ class CustomTextField extends StatelessWidget {
   OutlineInputBorder borderDecoration() {
     return OutlineInputBorder(
       // borderRadius: BorderRadius.circular(12),
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(12),
       borderSide: const BorderSide(
         color: Color(0xffEEEDEC),
         width: 2,
@@ -79,7 +79,7 @@ class CustomTextField extends StatelessWidget {
   OutlineInputBorder errBorderDecoration() {
     return OutlineInputBorder(
       // borderRadius: BorderRadius.circular(12),
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(12),
       borderSide: const BorderSide(
         color: Colors.red,
         width: 2,

@@ -44,7 +44,6 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   Navigator.pushNamed(context, Routes.kRegisterView);
                 },
                 child: Text.rich(
-                  // textAlign: TextAlign.center,
                   TextSpan(
                     text: 'New here?',
                     style: Styles.style16(context).copyWith(
@@ -73,10 +72,16 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 hintText: 'Password',
                 controller: _password,
                 obscureText: true,
-                suffixIcon: Text(
-                  'Forgot?',
-                  style: Styles.style16(context).copyWith(
-                    color: const Color(0xffD5715B),
+                suffixIcon: GestureDetector(
+                  onTap: () => Navigator.pushNamed(
+                    context,
+                    Routes.kForgotPasswordView,
+                  ),
+                  child: Text(
+                    'Forgot?',
+                    style: Styles.style16(context).copyWith(
+                      color: const Color(0xffD5715B),
+                    ),
                   ),
                 ),
               ),
@@ -102,5 +107,3 @@ class _LoginViewBodyState extends State<LoginViewBody> {
     );
   }
 }
-
-
