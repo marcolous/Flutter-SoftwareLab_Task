@@ -3,6 +3,7 @@ import 'package:software_lab/core/utils/routes.dart';
 import 'package:software_lab/feature/auth/presentation/view/forgot_password/forgot_password_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/login/login_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/register/register_view.dart';
+import 'package:software_lab/feature/auth/presentation/view/reset_password/reset_password_view.dart';
 import 'package:software_lab/feature/auth/presentation/view/verify_otp/verify_otp_view.dart';
 import 'package:software_lab/feature/splash/presentation/view/splash_view.dart';
 
@@ -25,6 +26,7 @@ class SoftwareLab extends StatelessWidget {
         Routes.kRegisterView: (context) => const RegisterView(),
         Routes.kForgotPasswordView: (context) => const ForgotPasswordView(),
         Routes.kVerifyOtpView: (context) => const VerifyOtpView(),
+        Routes.kResetPasswordView: (context) => const ResetPasswordView(),
       },
     );
   }
@@ -32,9 +34,9 @@ class SoftwareLab extends StatelessWidget {
 
 //* onboarding
 //* login
-// forgot password
-// verify otp
-// reset password
+//* forgot password
+//* verify otp
+//* reset password
 
 //* register 
 // form info

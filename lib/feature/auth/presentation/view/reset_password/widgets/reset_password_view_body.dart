@@ -6,20 +6,22 @@ import 'package:software_lab/core/utils/styles.dart';
 import 'package:software_lab/core/widgets/custom_button.dart';
 import 'package:software_lab/core/widgets/custom_text_field.dart';
 
-class ForgotPasswordViewBody extends StatefulWidget {
-  const ForgotPasswordViewBody({super.key});
+class ResetPasswordViewBody extends StatefulWidget {
+  const ResetPasswordViewBody({super.key});
 
   @override
-  State<ForgotPasswordViewBody> createState() => _ForgotPasswordViewBodyState();
+  State<ResetPasswordViewBody> createState() => _ResetPasswordViewBodyState();
 }
 
-class _ForgotPasswordViewBodyState extends State<ForgotPasswordViewBody> {
-  final TextEditingController _phone = TextEditingController();
+class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
+  final TextEditingController _password = TextEditingController();
+  final TextEditingController _reEnterPassword = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey();
 
   @override
   void dispose() {
-    _phone.dispose();
+    _password.dispose();
+    _reEnterPassword.dispose();
     super.dispose();
   }
 
@@ -37,7 +39,7 @@ class _ForgotPasswordViewBodyState extends State<ForgotPasswordViewBody> {
             ),
             const Gap(90),
             Text(
-              'Forgot Password?',
+              'Reset Password',
               style: Styles.style35(context),
             ),
             const Gap(25),
@@ -65,16 +67,22 @@ class _ForgotPasswordViewBodyState extends State<ForgotPasswordViewBody> {
             ),
             const Gap(70),
             CustomTextField(
-              prefixIcon: AppImages.email,
-              hintText: 'Phone Number',
-              controller: _phone,
-              keyboardType: TextInputType.number,
+              prefixIcon: AppImages.password,
+              hintText: 'Password',
+              controller: _password,
+              obscureText: true,
+            ),
+            const Gap(25),
+            CustomTextField(
+              prefixIcon: AppImages.password,
+              hintText: 'Re-enter Password',
+              controller: _reEnterPassword,
+              obscureText: true,
             ),
             const Gap(30),
             CustomButton(
-              title: 'Send Code',
-              onPressed: () =>
-                  Navigator.pushNamed(context, Routes.kVerifyOtpView),
+              title: 'Submit',
+              onPressed: () {},
             ),
           ],
         ),

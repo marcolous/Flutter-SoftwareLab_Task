@@ -106,13 +106,10 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const CustomLoginText(),
-                    SizedBox(
-                      // width: 300,
-                      child: CustomButton(
-                        aspectRatio: 3.5,
-                        title: 'Continue',
-                        onPressed: () {},
-                      ),
+                    CustomButton(
+                      aspectRatio: 3.5,
+                      title: 'Continue',
+                      onPressed: () {},
                     ),
                   ],
                 ),
