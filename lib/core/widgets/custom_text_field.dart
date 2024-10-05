@@ -1,17 +1,19 @@
 // ignore_for_file: body_might_complete_normally_nullable
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:software_lab/core/utils/styles.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
     this.suffixIcon,
-     this.prefixIcon,
+    this.prefixIcon,
     required this.hintText,
     this.keyboardType,
     this.obscureText,
     required this.controller,
+    this.inputFormatters,
   });
   final Widget? suffixIcon;
   final Widget? prefixIcon;
@@ -19,6 +21,7 @@ class CustomTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool? obscureText;
   final TextEditingController controller;
+  final List<TextInputFormatter>? inputFormatters;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +36,7 @@ class CustomTextField extends StatelessWidget {
             return 'Required field';
           }
         },
+        inputFormatters: inputFormatters,
         autocorrect: false,
         obscureText: obscureText ?? false,
         keyboardType: keyboardType ?? TextInputType.emailAddress,

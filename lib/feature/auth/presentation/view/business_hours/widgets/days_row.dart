@@ -2,25 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:software_lab/feature/auth/presentation/view/business_hours/widgets/days_item.dart';
 
 class DaysRow extends StatefulWidget {
-  const DaysRow({super.key});
+  const DaysRow({
+    super.key,
+    required this.onDaySelected,
+    required this.selectedDays,
+  });
+  final Function(String) onDaySelected;
+  final Set<String> selectedDays;
 
   @override
   State<DaysRow> createState() => _DaysRowState();
 }
 
 class _DaysRowState extends State<DaysRow> {
-  final Set<String> _selectedDays = {};
-
-  void _toggleDaySelection(String day) {
-    setState(() {
-      if (_selectedDays.contains(day)) {
-        _selectedDays.remove(day);
-      } else {
-        _selectedDays.add(day);
-      }
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -28,38 +22,38 @@ class _DaysRowState extends State<DaysRow> {
       children: [
         DaysItem(
           title: 'M',
-          isSelected: _selectedDays.contains('M'),
-          onTap: () => _toggleDaySelection('M'),
+          isSelected: widget.selectedDays.contains('mon'),
+          onTap: () => widget.onDaySelected('mon'),
         ),
         DaysItem(
           title: 'T',
-          isSelected: _selectedDays.contains('T'),
-          onTap: () => _toggleDaySelection('T'),
+          isSelected: widget.selectedDays.contains('tue'),
+          onTap: () => widget.onDaySelected('tue'),
         ),
         DaysItem(
           title: 'W',
-          isSelected: _selectedDays.contains('W'),
-          onTap: () => _toggleDaySelection('W'),
+          isSelected: widget.selectedDays.contains('wed'),
+          onTap: () => widget.onDaySelected('wed'),
         ),
         DaysItem(
           title: 'Th',
-          isSelected: _selectedDays.contains('Th'),
-          onTap: () => _toggleDaySelection('Th'),
+          isSelected: widget.selectedDays.contains('thu'),
+          onTap: () => widget.onDaySelected('thu'),
         ),
         DaysItem(
           title: 'F',
-          isSelected: _selectedDays.contains('F'),
-          onTap: () => _toggleDaySelection('F'),
+          isSelected: widget.selectedDays.contains('fri'),
+          onTap: () => widget.onDaySelected('fri'),
         ),
         DaysItem(
           title: 'S',
-          isSelected: _selectedDays.contains('S'),
-          onTap: () => _toggleDaySelection('S'),
+          isSelected: widget.selectedDays.contains('sat'),
+          onTap: () => widget.onDaySelected('sat'),
         ),
         DaysItem(
           title: 'Su',
-          isSelected: _selectedDays.contains('Su'),
-          onTap: () => _toggleDaySelection('Su'),
+          isSelected: widget.selectedDays.contains('sun'),
+          onTap: () => widget.onDaySelected('sun'),
         ),
       ],
     );

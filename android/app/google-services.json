@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "943594265021",
+    "project_id": "software-lab-ca180",
+    "storage_bucket": "software-lab-ca180.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943594265021:android:71b04308dc190045539ad4",
+        "android_client_info": {
+          "package_name": "com.example.software_lab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChhbIOY7rnFYc0_z5hjJE7zWTtbxTeVmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
